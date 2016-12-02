@@ -1,5 +1,4 @@
 import { query } from '../services/users';
-
 export default {
     namespace: 'users',
 
@@ -31,7 +30,7 @@ export default {
          */
         *query({payload},{select, call, put}) {
             yield put({ type: 'showLoading' });
-            const { data } = yield call(query);
+            const { data } = yield call(query,{state: 'all'});
             if(data) {
                 yield put({
                     type: 'querySuccess',
