@@ -10,7 +10,7 @@ import UserModal from '../components/Users/UserModal';
 
 // 引入对应的样式
 // 可以暂时新建一个空的
-import styles from './Users.css';
+import styles from './Users.scss';
 
 var Users = ({ location, dispatch, users }) => {
     console.log("Users header")

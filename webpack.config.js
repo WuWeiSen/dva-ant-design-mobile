@@ -16,6 +16,16 @@ module.exports = function(webpackConfig, env) {
         return !(plugin instanceof webpack.optimize.CommonsChunkPlugin);
     });
 
+    // 配置scss
+    webpackConfig.module.loaders.push({
+        test: /\.scss$/,
+        exclude: null,
+        loaders: [
+            'style',
+            'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'
+        ]
+    })
+
     // Support CSS Modules
     // Parse all less files as css module.
     webpackConfig.module.loaders.forEach(function(loader, index) {

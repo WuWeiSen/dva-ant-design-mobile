@@ -9,7 +9,7 @@ npm install
 
 2.run the server 
 ```
-npm run start
+npm start
 ```
 
 3.open the chrome  
